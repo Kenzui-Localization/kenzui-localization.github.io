@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>硯水ローカライズ | 女性向け作品専門 中国語ローカライズ</title>
+    <!-- Google Fonts: Inter for general text, Shippori Mincho for premium Japanese feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Shippori Mincho', 'sans-serif'],
+                        serif: ['Shippori Mincho', 'serif'],
+                    },
+                    colors: {
+                        // Fresh, bright and girly premium pastel palette
+                        berry: {
+                            50: '#fff5f6',
+                            100: '#ffe4e8',
+                            200: '#ffb8c6',
+                            500: '#ff6584',
+                            700: '#ff4d73',
+                            800: '#e03b5a',
+                            900: '#7c1228',
+                        },
+                        warm: {
+                            50: '#fffcfd',
+                            100: '#fef3f5',
+                            200: '#fbd8dd',
+                            900: '#4a232b',
+                        },
+                        gold: {
+                            100: '#fdfaf5',
+                            300: '#f3dfba',
+                            400: '#eccb73',
+                            800: '#a68525',
+                        }
+                    },
+                    spacing: {
+                        '1/10': '10%',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth, premium visual fade-in effects */
+        .blur-blob {
+            filter: blur(100px);
+        }
+        /* Custom scrollbar styling for elegance */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdfaf6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffd0d7;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff7893;
+        }
+    </style>
+</head>
+<body class="bg-warm-50 text-warm-900 selection:bg-rose-100 selection:text-berry-900 overflow-x-hidden font-sans">
+
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 bg-warm-50/90 backdrop-blur-md border-b border-rose-100/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col select-none">
+                <span class="text-xl sm:text-2xl font-serif font-extrabold tracking-wider text-berry-700">硯水ローカライズ</span>
+                <span class="text-[9px] sm:text-[10px] tracking-widest font-serif font-medium text-berry-500 uppercase mt-0.5">Kenzui Localization</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-medium text-warm-900">
+                <a href="#about" class="hover:text-berry-700 transition-colors">About</a>
+                <a href="#strengths" class="hover:text-berry-700 transition-colors">選ばれる理由</a>
+                <a href="#services" class="hover:text-berry-700 transition-colors">サービス</a>
+                <a href="#works" class="hover:text-berry-700 transition-colors">実績</a>
+                <a href="#faq" class="hover:text-berry-700 transition-colors">FAQ</a>
+                <a href="#pricing" class="hover:text-berry-700 transition-colors">お問合せ</a>
+            </nav>
+
+            <!-- Desktop CTA -->
+            <div class="hidden md:block">
+                <a href="#pricing" class="bg-berry-700 hover:bg-berry-800 text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all hover:shadow-md transform hover:scale-[1.02]">
+                    お問い合わせ
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-md text-berry-700 hover:text-berry-500 focus:outline-none transition-colors" aria-label="Toggle menu">
+                <svg id="hamburger-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Side Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-warm-50/95 backdrop-blur-lg border-b border-rose-100 absolute left-0 w-full px-4 py-6 space-y-4 shadow-xl">
+        <a href="#about" class="block py-2 text-base font-medium text-warm-900 border-b border-rose-50/50 hover:text-berry-700">硯水ローカライズについて</a>
+        <a href="#strengths" class="block py-2 text-base font-medium text-warm-900 border-b border-rose-50/50 hover:text-berry-700">選ばれる理由</a>
+        <a href="#services" class="block py-2 text-base font-medium text-warm-900 border-b border-rose-50/50 hover:text-berry-700">サービス内容</a>
+        <a href="#works" class="block py-2 text-base font-medium text-warm-900 border-b border-rose-50/50 hover:text-berry-700">実績紹介</a>
+        <a href="#faq" class="block py-2 text-base font-medium text-warm-900 border-b border-rose-50/50 hover:text-berry-700">よくある質問</a>
+        <a href="#pricing" class="block py-2 text-base font-medium text-warm-900 border-b border-rose-50/50 hover:text-berry-700">お問い合わせ</a>
+        <a href="#pricing" class="block text-center bg-berry-700 hover:bg-berry-800 text-white py-3 rounded-xl text-sm font-semibold tracking-wider transition-all">お問い合わせへ</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-b from-rose-50 via-warm-50 to-white py-20 sm:py-32 overflow-hidden border-b border-rose-100/50">
+    <!-- Abstract blurred decorative background shapes matching Otome visual novel aesthetic -->
+    <div class="absolute -top-12 -left-20 w-80 h-80 rounded-full bg-rose-200/40 blur-blob pointer-events-none"></div>
+    <div class="absolute top-1/2 right-1/10 w-96 h-96 rounded-full bg-gold-100/60 blur-blob -translate-y-1/2 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center space-y-8 max-w-4xl mx-auto">
+            
+            <!-- Styled Badge for Specialization -->
+            <div class="inline-flex items-center gap-2 bg-white/95 border border-rose-200 px-4 py-2 rounded-full shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-berry-700 animate-pulse"></span>
+                <span class="text-xs sm:text-sm font-serif font-bold text-berry-700 tracking-wider">
+                    女性向け作品専門 中国語ローカライズ
+                </span>
+            </div>
+
+            <!-- Main Catchphrase Header with natural phrase-level word wrap -->
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-extrabold tracking-loose leading-tight sm:leading-tight text-berry-900">
+                <span class="inline-block">女性向け作品専門</span><br class="block sm:hidden"><span class="inline-block bg-gradient-to-r from-berry-700 via-berry-500 to-berry-700 bg-clip-text text-transparent sm:ml-2">中国語ローカライズ</span>
+            </h1>
+
+            <span class="block text-xs sm:text-sm tracking-widest font-serif font-semibold text-berry-500 uppercase">
+                Chinese Localization for Female-Oriented Works
+            </span>
+
+            <!-- Subheading description -->
+            <p class="text-sm sm:text-base md:text-lg text-warm-900 font-serif leading-relaxed max-w-2xl mx-auto pt-2">
+                乙女ゲーム・音声作品・漫画を中心に、<br>
+                中国語（簡体字／繁体字）翻訳およびローカライズを承っております。
+            </p>
+            <p class="text-sm sm:text-base md:text-lg text-berry-700 font-serif font-bold leading-relaxed max-w-2xl mx-auto">
+                作品の魅力をそのままに、中国語圏ユーザーへ届けるお手伝いをいたします。
+            </p>
+
+            <!-- Interactive Action buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 max-w-md mx-auto">
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-berry-700 hover:bg-berry-800 text-white font-semibold rounded-full tracking-wider transition-all shadow-md hover:shadow-lg transform hover:scale-[1.01] text-xs sm:text-sm">
+                    サービスを見る
+                </a>
+                <a href="#works" class="w-full sm:w-auto px-8 py-4 bg-white/95 hover:bg-white text-berry-700 border border-rose-200 font-semibold rounded-full tracking-wider transition-all shadow-sm hover:shadow-md transform hover:scale-[1.01] text-xs sm:text-sm">
+                    実績を見る
+                </a>
+                <a href="#pricing" class="w-full sm:w-auto px-8 py-4 bg-berry-500 hover:bg-berry-600 text-white font-semibold rounded-full tracking-wider transition-all shadow-sm hover:shadow-md transform hover:scale-[1.01] text-xs sm:text-sm">
+                    お問い合わせ
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Visual branding element (Left side card) -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative bg-gradient-to-tr from-rose-100 to-warm-100 p-8 sm:p-12 rounded-[2rem] border border-rose-100 w-full max-w-md shadow-sm">
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-gold-100 rounded-full mix-blend-multiply opacity-60 blur-xl"></div>
+                    <div class="space-y-6 text-center">
+                        <!-- Rounded Profile Avatar utilizing shodo.png -->
+                        <div class="w-28 h-28 bg-white border-2 border-rose-200 rounded-full mx-auto flex items-center justify-center shadow-sm overflow-hidden p-3">
+                            <img src="shodo.png" alt="硯水ローカライズ" class="w-full h-full object-contain">
+                        </div>
+                        <div class="space-y-1">
+                            <h4 class="text-xl font-serif font-bold text-berry-900">硯水ローカライズ</h4>
+                            <p class="text-xs font-serif text-berry-500 font-semibold">Kenzui Localization</p>
+                        </div>
+                        <p class="text-xs text-warm-900 font-serif leading-relaxed border-t border-rose-100/50 pt-4">
+                            乙女サークル様・同人音声制作者様が創り出す、愛に溢れたキャラクターの息遣いを、そのままのニュアンスで中国語へと繋ぎます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Narrative Introduction text (Right side) -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="space-y-2">
+                    <span class="text-xs sm:text-sm text-berry-700 font-semibold uppercase tracking-widest">About Us</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-berry-700">Kenzui Localizationについて</h2>
+                    <div class="w-12 h-1 bg-berry-500 rounded"></div>
+                </div>
+
+                <div class="space-y-4 text-sm sm:text-base leading-relaxed text-warm-900 font-serif">
+                    <p class="font-bold text-berry-700">
+                        女性向け作品を中心とした中国語ローカライズサービスを提供しています。
+                    </p>
+                    <p>
+                        乙女ゲーム、シチュエーションボイス、女性向け漫画などの翻訳経験を活かし、単なる機械的な直訳ではなく、中国語圏のユーザーに感情の機微が極めて自然に伝わる表現を最も重視しています。
+                    </p>
+                    <p>
+                        作品ごとに描かれる独自の世界観、複雑に変化するキャラクターの絶妙な関係性やニュアンスを深く尊重しながら、一字一句を読みやすく魅力的な翻訳に昇華させ、読者に極上の「ときめき」をご提案いたします。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Strengths Section (選ばれる理由) -->
+<section id="strengths" class="py-20 sm:py-28 bg-warm-50 relative overflow-hidden">
+    <div class="absolute bottom-0 left-1/10 w-80 h-80 rounded-full bg-rose-100/20 blur-blob pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <span class="text-xs sm:text-sm text-berry-700 font-semibold uppercase tracking-widest">Strengths</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-berry-700">選ばれる理由</h2>
+            <div class="w-12 h-1 bg-berry-500 mx-auto rounded"></div>
+        </div>
+
+        <!-- 3 Pillars Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Strength 1: Deep understanding of female works -->
+            <div class="bg-white p-8 rounded-3xl border border-rose-100/80 shadow-sm hover:shadow-md transition-all space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center text-berry-700">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-serif font-bold text-berry-700">女性向け作品への深い理解</h3>
+                <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
+                    翻訳業務に加え、女性向けゲーム会社にてキャラクター紹介文・プロモーションテキスト制作に携わった経験があります。キャラクターの魅力や世界観を重視し、中国語圏ユーザーへ自然に伝わるローカライズをご提案いたします。
+                </p>
+            </div>
+
+            <!-- Strength 2: Cultural intelligence of Chinese market -->
+            <div class="bg-white p-8 rounded-3xl border border-rose-100/80 shadow-sm hover:shadow-md transition-all space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center text-berry-700">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-serif font-bold text-berry-700">中国市場への理解</h3>
+                <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
+                    中国語圏ユーザー（乙女ゲーマー、音声作品リスナー、同人コミュニティ等）の嗜好トレンド、文化背景、表現の受け取り方を考慮した緻密なカルチャライズを行い、作品価値を高めます。
+                </p>
+            </div>
+
+            <!-- Strength 3: Strict Quality Assurance background -->
+            <div class="bg-white p-8 rounded-3xl border border-rose-100/80 shadow-sm hover:shadow-md transition-all space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center text-berry-700">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6.267 3.455a.75.75 0 00-.708-.523H4.5a.75.75 0 00-.75.75v12.5c0 .414.336.75.75.75h11a.75.75 0 00.75-.75V3.682a.75.75 0 00-.75-.75h-1.06a.75.75 0 00-.707.523L12.91 5.25H7.09l-.824-1.795zM13.5 10a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm-1.5 5c2.21 0 4-1.79 4-4a.75.75 0 00-.75-.75H8.75A.75.75 0 008 11c0 2.21 1.79 4 4 4z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-serif font-bold text-berry-700">品質チェック経験</h3>
+                <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
+                    翻訳・校正・品質確認業務の経験を活かし、音声台本の尺調整、作品特有のルビ処理、誤訳防止、キャラクター別の口調統制を行い、読みやすく自然な中国語へと調整いたします。
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 sm:py-28 bg-white border-y border-rose-100/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <span class="text-xs sm:text-sm text-berry-700 font-semibold uppercase tracking-widest">Services</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-berry-700">サービス</h2>
+            <div class="w-12 h-1 bg-berry-500 mx-auto rounded"></div>
+        </div>
+
+        <!-- Services Grid (2x2 Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            
+            <!-- Service 1: Translation -->
+            <div class="bg-warm-50/50 border border-rose-100 p-8 rounded-[2rem] space-y-4">
+                <span class="text-xs bg-rose-100 text-berry-900 font-bold px-3 py-1 rounded-full uppercase tracking-wider">翻訳</span>
+                <h3 class="text-xl font-serif font-bold text-berry-700">中国語翻訳 (日本語 → 簡体字・繁体字)</h3>
+                <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
+                    原作のもつ情感やキャラクター間の心理的変化を細部まで汲み取った高品質な翻訳です。
+                </p>
+                <div class="border-t border-rose-100/50 pt-4">
+                    <ul class="grid grid-cols-2 gap-2 text-xs sm:text-sm font-semibold text-berry-900 font-serif">
+                        <li class="flex items-center gap-1.5">🌸 乙女／ノベルゲーム</li>
+                        <li class="flex items-center gap-1.5">🎧 音声作品台本</li>
+                        <li class="flex items-center gap-1.5">📖 女性向け漫画 ※</li>
+                        <li class="flex items-center gap-1.5">🌟 その他同人作品</li>
+                        <li class="flex items-center gap-1.5">📦 商品紹介文</li>
+                    </ul>
+                    <p class="text-[10px] text-berry-500 font-serif mt-2">※ 漫画翻訳は、翻訳から写植（Typesetting）まで一括対応可能です。</p>
+                </div>
+            </div>
+
+            <!-- Service 2: Proofreading -->
+            <div class="bg-warm-50/50 border border-rose-100 p-8 rounded-[2rem] space-y-4">
+                <span class="text-xs bg-rose-100 text-berry-900 font-bold px-3 py-1 rounded-full uppercase tracking-wider">校正</span>
+                <h3 class="text-xl font-serif font-bold text-berry-700">中国語校正</h3>
+                <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
+                    すでに他所で翻訳されたテキストを再確認し、専門用語の揺れ防止、誤訳修正、女性向け特有のキャラクターの口調統一チェックを行います。
+                </p>
+                <div class="border-t border-rose-100/50 pt-4">
+                    <ul class="grid grid-cols-2 gap-2 text-xs sm:text-sm font-semibold text-berry-900 font-serif">
+                        <li class="flex items-center gap-1.5">🔍 誤訳・脱字確認</li>
+                        <li class="flex items-center gap-1.5">💬 口調・表現統一</li>
+                        <li class="flex items-center gap-1.5">🏷️ 表記の揺れ表記統一</li>
+                        <li class="flex items-center gap-1.5">✨ 自然な仕上がり調整</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3: Rewrite -->
+            <div class="bg-warm-50/50 border border-rose-100 p-8 rounded-[2rem] space-y-4">
+                <span class="text-xs bg-rose-100 text-berry-900 font-bold px-3 py-1 rounded-full uppercase tracking-wider">リライト</span>
+                <h3 class="text-xl font-serif font-bold text-berry-700">中国語リライト・ブラッシュアップ</h3>
+                <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
+                    機械翻訳や一般的な翻訳によって「硬く平坦」になってしまった台詞を、甘美で感情豊かな文章へ。音声作品の「耳心地の良さ」を最優先に仕上げ直します。
+                </p>
+            </div>
+
+            <!-- Service 4: Localization Support -->
+            <div class="bg-warm-50/50 border border-rose-100 p-8 rounded-[2rem] space-y-4">
+                <span class="text-xs bg-rose-100 text-berry-900 font-bold px-3 py-1 rounded-full uppercase tracking-wider">サポート</span>
+                <h3 class="text-xl font-serif font-bold text-berry-700">ローカライズサポート</h3>
+                <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
+                    中国市場へのサークル展開を検討中の方へ。プラットフォーム出品説明文の最適化、キーワードタグの選定、タイトル調整など、トータルでバックアップします。
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Works Section -->
+<section id="works" class="py-20 sm:py-28 bg-warm-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
+            <span class="text-xs sm:text-sm text-berry-700 font-semibold uppercase tracking-widest">Works & Achievements</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-berry-700">実績紹介</h2>
+            <div class="w-12 h-1 bg-berry-500 mx-auto rounded"></div>
+            <p class="text-xs sm:text-sm text-warm-900 font-serif max-w-lg mx-auto pt-2">
+                ※守秘義務（NDA）締結につき具体的なサークル名やタイトル名は伏せておりますが、これまでに多数のプロジェクトを担当しています。
+            </p>
+        </div>
+
+        <!-- High-Impact Stats Block (130+ Works, 70+ Audio, 60+ Manga, 1M+ Words) -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto mb-16 text-center">
+            <!-- Stat 1: Total Works (Custom Requested Phrase) -->
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-rose-100 shadow-sm flex flex-col justify-between h-full">
+                <div>
+                    <p class="text-2xl sm:text-3xl font-serif font-bold text-berry-700">130<span class="text-xs sm:text-sm">作品以上</span></p>
+                    <p class="text-[11px] sm:text-xs font-semibold text-berry-700 mt-2">ローカライズ実績</p>
+                </div>
+                <p class="text-[10px] text-berry-500 font-serif mt-2 border-t border-rose-50 pt-2 leading-tight">中国語簡体字版6,500DL超作品を含む</p>
+            </div>
+            <!-- Stat 2: Audio Drama -->
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-rose-100 shadow-sm flex flex-col justify-between h-full">
+                <div>
+                    <p class="text-2xl sm:text-3xl font-serif font-bold text-berry-700">70<span class="text-xs sm:text-sm">作品以上</span></p>
+                    <p class="text-[11px] sm:text-xs font-semibold text-berry-700 mt-2">音声作品ローカライズ</p>
+                </div>
+                <p class="text-[10px] text-warm-900 font-serif mt-2 border-t border-rose-50 pt-2 leading-tight">耳心地重視の流れるような口語訳</p>
+            </div>
+            <!-- Stat 3: Manga Works -->
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-rose-100 shadow-sm flex flex-col justify-between h-full">
+                <div>
+                    <p class="text-2xl sm:text-3xl font-serif font-bold text-berry-700">60<span class="text-xs sm:text-sm">作品以上</span></p>
+                    <p class="text-[11px] sm:text-xs font-semibold text-berry-700 mt-2">漫画作品ローカライズ</p>
+                </div>
+                <p class="text-[10px] text-warm-900 font-serif mt-2 border-t border-rose-50 pt-2 leading-tight">原作コマに馴染む丁寧な翻訳</p>
+            </div>
+            <!-- Stat 4: Cumulative Wordcount -->
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-rose-100 shadow-sm flex flex-col justify-between h-full">
+                <div>
+                    <p class="text-2xl sm:text-3xl font-serif font-bold text-gold-800">100万<span class="text-xs sm:text-sm">字以上</span></p>
+                    <p class="text-[11px] sm:text-xs font-semibold text-berry-700 mt-2">累計翻訳・校正文字数</p>
+                </div>
+                <p class="text-[10px] text-warm-900 font-serif mt-2 border-t border-rose-50 pt-2 leading-tight">一文字に思いを込める確かな品質</p>
+            </div>
+        </div>
+
+        <!-- Safe Anonymized Portfolio Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            
+            <!-- Work Item 1 -->
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-rose-100 shadow-sm space-y-4">
+                <div class="flex items-center justify-between border-b border-rose-100/50 pb-3">
+                    <span class="text-xs bg-rose-50 text-berry-700 font-bold px-2.5 py-1 rounded-full font-serif">女性向け音声作品</span>
+                    <span class="text-xs text-warm-900 font-serif">翻訳（日→簡体字）</span>
+                </div>
+                <h4 class="text-base font-serif font-bold text-berry-900">
+                    シチュエーションボイス・ASMRドラマ台本
+                </h4>
+                <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
+                    キャラクター特有の感情の揺れ動きや甘い語りかけ、ブレス位置の整合性などを完璧に再現。原作者様の世界観を損なわずに魅力的な中国語へと翻訳しました。
+                </p>
+                <span class="block text-[10px] text-berry-500 font-semibold">※守秘義務契約遵守（作品名非公開）</span>
+            </div>
+
+            <!-- Work Item 2 -->
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-rose-100 shadow-sm space-y-4">
+                <div class="flex items-center justify-between border-b border-rose-100/50 pb-3">
+                    <span class="text-xs bg-rose-50 text-berry-700 font-bold px-2.5 py-1 rounded-full font-serif">女性向け同人作品</span>
+                    <span class="text-xs text-warm-900 font-serif">翻訳（日→簡体字・繁体字）</span>
+                </div>
+                <h4 class="text-base font-serif font-bold text-berry-900">
+                    乙女向け恋愛シミュレーション・ノベルゲーム
+                </h4>
+                <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
+                    物語中の選択肢ごとに異なるトーン、プレイヤーキャラクターに対する好感度変化による語尾の違い、ゲームシステム周りのテキストまで幅広くローカライズをサポート。
+                </p>
+                <span class="block text-[10px] text-berry-500 font-semibold">※守秘義務契約遵守（作品名非公開）</span>
+            </div>
+
+            <!-- Work Item 3 -->
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-rose-100 shadow-sm space-y-4">
+                <div class="flex items-center justify-between border-b border-rose-100/50 pb-3">
+                    <span class="text-xs bg-rose-50 text-berry-700 font-bold px-2.5 py-1 rounded-full font-serif">女性向け漫画・Webtoon</span>
+                    <span class="text-xs text-warm-900 font-serif">翻訳・写植</span>
+                </div>
+                <h4 class="text-base font-serif font-bold text-berry-900">
+                    恋愛・ファンタジーコミックの中国語翻訳・校正・写植
+                </h4>
+                <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
+                    翻訳から写植（Typesetting）まで一括での対応が可能です。セリフのオノマトペ、吹き出し内の文字レイアウト配置チェック、キャラクター口調の揺れ調整を綿密に行いました。
+                </p>
+            </div>
+
+            <!-- Work Item 4 -->
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-rose-100 shadow-sm space-y-4">
+                <div class="flex items-center justify-between border-b border-rose-100/50 pb-3">
+                    <span class="text-xs bg-rose-50 text-berry-700 font-bold px-2.5 py-1 rounded-full font-serif">品質チェック</span>
+                    <span class="text-xs text-warm-900 font-serif">クオリティ監査</span>
+                </div>
+                <h4 class="text-base font-serif font-bold text-berry-900">
+                    他社翻訳クオリティ再診断および表現チェック
+                </h4>
+                <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
+                    外部企業による一度完了した中国語訳に対して、女性向けゲームの観点から違和感がないか客観的に審査。さらに<strong>2,000作品以上の多岐にわたる漫画校正実績</strong>を活かして、「キャラクター性がブレていないか」など専門性の高い報告書を作成。
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-20 sm:py-28 bg-white border-b border-rose-100/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center space-y-4 mb-12">
+            <span class="text-xs sm:text-sm text-berry-700 font-semibold uppercase tracking-widest">FAQ</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-berry-700">よくある質問</h2>
+            <div class="w-12 h-1 bg-berry-500 mx-auto rounded"></div>
+        </div>
+
+        <!-- Accordions -->
+        <div class="space-y-4">
+            
+            <!-- Accordion item 1 -->
+            <div class="bg-warm-50/50 border border-rose-100 rounded-2xl overflow-hidden transition-all duration-300">
+                <button type="button" onclick="toggleAccordion(1)" class="w-full flex justify-between items-center px-6 py-4 sm:py-5 text-left focus:outline-none">
+                    <span class="font-serif font-bold text-sm sm:text-base text-berry-900 flex items-center gap-3">
+                        <span class="text-berry-700">Q1.</span> 対応言語は？
+                    </span>
+                    <svg id="arrow-icon-1" class="w-5 h-5 text-berry-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="accordion-content-1" class="hidden border-t border-rose-50 px-6 py-4 bg-white">
+                    <p class="text-xs sm:text-sm text-warm-900 font-serif leading-relaxed">
+                        日本語から中国語（簡体字および繁体字）への翻訳・ローカライズに対応しております。
+                        中国本土向けの簡体字（简体中文）と、台湾・香港・マカオ地域向けの繁体字（繁體中文）を、配信プラットフォームやターゲット市場に合わせて書き分けることが可能です。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Accordion item 2 -->
+            <div class="bg-warm-50/50 border border-rose-100 rounded-2xl overflow-hidden transition-all duration-300">
+                <button type="button" onclick="toggleAccordion(2)" class="w-full flex justify-between items-center px-6 py-4 sm:py-5 text-left focus:outline-none">
+                    <span class="font-serif font-bold text-sm sm:text-base text-berry-900 flex items-center gap-3">
+                        <span class="text-berry-700">Q2.</span> 女性向け以外のジャンルの翻訳も対応可能ですか？
+                    </span>
+                    <svg id="arrow-icon-2" class="w-5 h-5 text-berry-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="accordion-content-2" class="hidden border-t border-rose-50 px-6 py-4 bg-white">
+                    <p class="text-xs sm:text-sm text-warm-900 font-serif leading-relaxed">
+                        はい、対応可能です。当サークルの専門領域は「女性向け作品」ですが、ゲームのUI、ファンタジー系ノベル、コミック一般など様々なジャンルに関しても十分対応できるリテラシー・技術を有しております。まずは作品概要を添えてお気軽にご相談ください。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Accordion item 3 -->
+            <div class="bg-warm-50/50 border border-rose-100 rounded-2xl overflow-hidden transition-all duration-300">
+                <button type="button" onclick="toggleAccordion(3)" class="w-full flex justify-between items-center px-6 py-4 sm:py-5 text-left focus:outline-none">
+                    <span class="font-serif font-bold text-sm sm:text-base text-berry-900 flex items-center gap-3">
+                        <span class="text-berry-700">Q3.</span> 成人向け作品（R-18）のローカライズは対応可能ですか？
+                    </span>
+                    <svg id="arrow-icon-3" class="w-5 h-5 text-berry-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="accordion-content-3" class="hidden border-t border-rose-50 px-6 py-4 bg-white">
+                    <p class="text-xs sm:text-sm text-warm-900 font-serif leading-relaxed">
+                        はい、対応可能です。<br>
+                        ただし、以下の内容を含む作品はお受けしておりません。<br>
+                        ・虫姦<br>
+                        ・死体性愛（ネクロフィリア）<br>
+                        ・その他、過度にグロテスクな表現を含む作品
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Consolidated Contact Section -->
+<section id="pricing" class="py-20 sm:py-28 bg-warm-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
+            <span class="text-xs sm:text-sm text-berry-700 font-semibold uppercase tracking-widest">Contact</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-berry-700">お問い合わせ</h2>
+            <div class="w-12 h-1 bg-berry-500 mx-auto rounded"></div>
+            <p class="text-sm sm:text-base text-warm-900 font-serif leading-relaxed max-w-lg mx-auto pt-2">
+                ご依頼・ご相談はメールまたはX（旧Twitter）のDMより直接受け付けております。お気軽にご相談ください。
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-6xl mx-auto">
+            
+            <!-- Interactive Inquiry assistant Tool (Left side) -->
+            <div class="lg:col-span-7 bg-white border border-rose-100 p-6 sm:p-8 rounded-[2rem] space-y-6 flex flex-col justify-between shadow-sm">
+                <div class="space-y-2">
+                    <h3 class="text-lg font-serif font-bold text-berry-700 flex items-center gap-1.5">
+                        <span>✉️</span> お問い合わせ作成アシスト
+                    </h3>
+                    <p class="text-xs text-warm-900 font-serif leading-relaxed">
+                        下記の条件を選ぶだけで、硯水ローカライズ宛てのお問い合わせメッセージの下書きを自動作成できます。コピーしてそのままお使いください。
+                    </p>
+                </div>
+
+                <!-- Input Interactive Form Elements -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-2">
+                    <div class="space-y-1">
+                        <label for="plan-name" class="block text-xs font-bold text-berry-700">サークル名 / お名前</label>
+                        <input type="text" id="plan-name" class="w-full text-xs bg-warm-50 border border-rose-200 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-rose-300" placeholder="例：サークル名" oninput="generateEmailTemplate()">
+                    </div>
+                    <div class="space-y-1">
+                        <label for="plan-genre" class="block text-xs font-bold text-berry-700">作品ジャンル</label>
+                        <select id="plan-genre" class="w-full text-xs bg-warm-50 border border-rose-200 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-rose-300" onchange="generateEmailTemplate()">
+                            <option value="シチュエーション音声作品">シチュエーション音声作品</option>
+                            <option value="乙女・ノベルゲーム">乙女・ノベルゲーム</option>
+                            <option value="女性向け漫画">女性向け漫画</option>
+                            <option value="その他同人作品">その他同人作品</option>
+                        </select>
+                    </div>
+                    <div class="space-y-1">
+                        <label for="plan-volume" class="block text-xs font-bold text-berry-700">概算量 (文字数 or 尺分)</label>
+                        <input type="text" id="plan-volume" class="w-full text-xs bg-warm-50 border border-rose-200 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-rose-300" placeholder="例：30,000文字 / 60分程度" oninput="generateEmailTemplate()">
+                    </div>
+                    <div class="space-y-1">
+                        <label for="plan-deadline" class="block text-xs font-bold text-berry-700">希望納期</label>
+                        <input type="text" id="plan-deadline" class="w-full text-xs bg-warm-50 border border-rose-200 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-rose-300" placeholder="例：来月末頃まで" oninput="generateEmailTemplate()">
+                    </div>
+                    <div class="space-y-1 sm:col-span-2">
+                        <label for="plan-budget" class="block text-xs font-bold text-berry-700">ご予算（任意）</label>
+                        <input type="text" id="plan-budget" class="w-full text-xs bg-warm-50 border border-rose-200 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-rose-300" placeholder="例：〇万円程度、相談して決めたい、など" oninput="generateEmailTemplate()">
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center">
+                        <label for="plan-output" class="block text-xs font-bold text-berry-700">自動生成された下書きメール（編集可能です）</label>
+                        <button type="button" onclick="copyTemplateText()" class="text-xs text-berry-700 font-bold hover:underline flex items-center gap-1">
+                            📋 コピーする
+                        </button>
+                    </div>
+                    <textarea id="plan-output" rows="6" class="w-full text-xs bg-warm-50 border border-rose-200 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-rose-300 font-serif leading-relaxed"></textarea>
+                    <span id="copy-feedback-planner" class="text-[10px] text-emerald-600 font-bold font-serif opacity-0 transition-opacity duration-300 block">
+                        ✨ 下書きをクリップボードにコピーしました！そのまま貼り付けてご連絡ください。
+                    </span>
+                </div>
+            </div>
+
+            <!-- Pricing and Payment methods details (Right side) -->
+            <div class="lg:col-span-5 flex flex-col gap-6">
+                
+                <!-- Pricing Information Block -->
+                <div class="bg-gradient-to-tr from-rose-50 to-white border border-rose-100 p-6 sm:p-8 rounded-[2rem] space-y-4 flex-1 flex flex-col justify-center">
+                    <span class="text-xs bg-rose-100 text-berry-900 font-bold px-3 py-1 rounded-full uppercase tracking-wider self-start">料金プラン</span>
+                    <h3 class="text-base sm:text-lg font-serif font-bold text-berry-900 leading-relaxed">
+                        案件内容・文字数・納期に応じて<br>個別にお見積りいたします。
+                    </h3>
+                    <p class="text-xs text-warm-900 leading-relaxed font-serif">
+                        「この台詞数ならいくらくらい？」「音声の尺が〇分なのだが…」など、まずはサークル様の想定のご予算やスケジュールに合わせて、最適なプランをご提案させていただきます。
+                    </p>
+                    
+                    <!-- Payment Methods Block -->
+                    <div class="border-t border-dashed border-rose-200 pt-4 mt-2 space-y-2">
+                        <p class="text-xs font-serif font-bold text-berry-700">💳 お支払い方法</p>
+                        <p class="text-sm font-serif font-bold text-berry-900">PayPay、銀行口座、Wiseなど対応</p>
+                        <p class="text-[11px] text-berry-500 font-serif leading-tight">※海外からの送金や、迅速なオンライン決済にも柔軟に対応しております。</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info card -->
+                <div class="bg-gradient-to-tr from-rose-50 to-white border border-rose-100 p-6 sm:p-8 rounded-[2rem] space-y-4">
+                    <h3 class="text-sm font-serif font-bold text-berry-700 flex items-center gap-2">
+                        <span>✉️</span> 直接メールアドレス
+                    </h3>
+                    <div class="bg-white border border-rose-100 p-3 rounded-xl flex items-center justify-between shadow-inner">
+                        <span class="text-xs font-mono font-semibold text-berry-900" id="contact-email-text">tr.shitara@gmail.com</span>
+                        <button type="button" onclick="copyEmailToClipboard()" class="text-[10px] bg-rose-50 hover:bg-rose-100 text-berry-700 font-bold px-2.5 py-1 rounded-lg transition-colors">
+                            コピー
+                        </button>
+                    </div>
+                    <span id="copy-feedback-email" class="text-[10px] text-emerald-600 font-bold font-serif opacity-0 transition-opacity duration-300 block">
+                        ✨ メールアドレスをコピーしました！
+                    </span>
+
+                    <h3 class="text-sm font-serif font-bold text-berry-700 flex items-center gap-2 pt-2">
+                        <span>📱</span> X（旧Twitter）
+                    </h3>
+                    <a href="https://x.com/kenzu1y" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-berry-700 hover:bg-berry-800 text-white font-semibold text-xs px-4 py-2.5 rounded-full transition-all shadow-sm">
+                        <span>@kenzu1y 宛てにDMを送る ↗</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer Slogan and Signature -->
+<footer class="bg-berry-900 text-white py-12 relative overflow-hidden">
+    <!-- Beautiful gradient overlays inside footer -->
+    <div class="absolute inset-0 bg-gradient-to-t from-berry-900 to-berry-950 opacity-95"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center space-y-8">
+            
+            <!-- Beautiful, Premium Footer Slogan (Gracefully fit to 1 line, preventing forced breaks) -->
+            <div class="py-6 border-b border-rose-100/15 max-w-3xl mx-auto">
+                <span class="inline-block whitespace-nowrap text-xs sm:text-sm md:text-base font-serif font-semibold text-rose-200 tracking-wider">
+                    作品の魅力を、言葉の壁を越えて届ける。
+                </span>
+            </div>
+
+            <!-- Footer Details -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-serif text-rose-100/70">
+                <div class="space-y-1 text-center md:text-left">
+                    <p class="text-sm font-serif font-bold text-white tracking-wider">硯水ローカライズ</p>
+                    <p class="text-[10px] tracking-widest text-rose-300">Chinese Localization for Female-Oriented Works</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#about" class="hover:text-white transition-colors">About</a>
+                    <a href="#services" class="hover:text-white transition-colors">サービス</a>
+                    <a href="#works" class="hover:text-white transition-colors">実績</a>
+                    <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+                    <a href="#pricing" class="hover:text-white transition-colors">お問合せ</a>
+                </div>
+            </div>
+
+            <!-- Legal disclaimer & trademark -->
+            <p class="text-[10px] text-rose-100/40 text-center font-mono">
+                &copy; 2026 Kenzui Localization (硯水ローカライズ). All Rights Reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Toggle Mobile Navigation Menu Drawer
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+            mobileMenu.classList.remove('hidden');
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+        } else {
+            mobileMenu.classList.add('hidden');
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        }
+    });
+
+    // Close mobile side drawer when clicking any link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        });
+    });
+
+    // Accordion Control Handler for FAQs
+    function toggleAccordion(index) {
+        const content = document.getElementById(`accordion-content-${index}`);
+        const arrow = document.getElementById(`arrow-icon-${index}`);
+        
+        const isHidden = content.classList.contains('hidden');
+        
+        // Hide all first to provide a clean visual flow
+        for (let i = 1; i <= 3; i++) {
+            document.getElementById(`accordion-content-${i}`).classList.add('hidden');
+            document.getElementById(`arrow-icon-${i}`).classList.remove('rotate-180');
+        }
+
+        if (isHidden) {
+            content.classList.remove('hidden');
+            arrow.classList.add('rotate-180');
+        }
+    }
+
+    // Dynamic Email inquiry template composer
+    function generateEmailTemplate() {
+        const name = document.getElementById('plan-name').value.trim() || "[サークル名 / お名前]";
+        const genre = document.getElementById('plan-genre').value;
+        const volume = document.getElementById('plan-volume').value.trim() || "[〇〇文字 / 〇〇分]";
+        const deadline = document.getElementById('plan-deadline').value.trim() || "[〇月〇旬頃 / 柔軟に対応可能]";
+        const budget = document.getElementById('plan-budget').value.trim() || "[予算感があればお書きください / 相談して決めたい]";
+
+        const template = `初めまして、${name}と申します。
+
+この度、制作中の女性向け作品の中国語ローカライズ（翻訳・カルチャライズ）について相談をしたくご連絡いたしました。
+
+以下に作品の現時点における概要を記載いたします。
+
+-----------------------------------------
+【作品のジャンル】${genre}
+【想定ボリューム】${volume}
+【希望の翻訳納期】${deadline}
+【ご予算の目安】${budget}
+【作品の概要URL・詳細】
+※作品の簡単な設定や、配布サイト、サークルURLなどをご自由に入力ください。
+-----------------------------------------
+
+お忙しい中恐れ入りますが、ご査収いただけますと幸いです。
+よろしくお願い申し上げます。`;
+
+        document.getElementById('plan-output').value = template;
+    }
+
+    // Initialize Default Email Template on load
+    window.onload = function() {
+        generateEmailTemplate();
+    };
+
+    // Copy Generated Template Text Helper
+    function copyTemplateText() {
+        const outputField = document.getElementById('plan-output');
+        const feedback = document.getElementById('copy-feedback-planner');
+        
+        if (!outputField.value) {
+            generateEmailTemplate();
+        }
+
+        outputField.select();
+        outputField.setSelectionRange(0, 99999); // For mobile devices
+
+        try {
+            document.execCommand('copy');
+            feedback.classList.remove('opacity-0');
+            setTimeout(() => {
+                feedback.classList.add('opacity-0');
+            }, 3000);
+        } catch (err) {
+            console.error('Failed to copy', err);
+        }
+    }
+
+    // Direct Copy Email Address Helper (Required to use document.execCommand)
+    function copyEmailToClipboard() {
+        const emailStr = "tr.shitara@gmail.com";
+        const tempInput = document.createElement("input");
+        tempInput.style.position = "absolute";
+        tempInput.style.left = "-9999px";
+        tempInput.value = emailStr;
+        document.body.appendChild(tempInput);
+        
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999);
+        
+        try {
+            document.execCommand('copy');
+            const feedback = document.getElementById('copy-feedback-email');
+            feedback.classList.remove('opacity-0');
+            setTimeout(() => {
+                feedback.classList.add('opacity-0');
+            }, 3000);
+        } catch (err) {
+            console.error('Could not copy text', err);
+        }
+        
+        document.body.removeChild(tempInput);
+    }
+</script>
+
+</body>
+</html>
+```
+eof
+
+### 🌸 调整说明：
+* **清晰换行**：在回答中使用 `<br>` 标签进行了工整地换行，保证日本客户在手机和电脑端展开阅读时，这些排斥条款能够一目了然、清晰易读。
+* **专业且有度**：这种理性并具有底线的表达方式，在同人及乙女圈子里是非常标准的免责声明，会给真正优质的社团留下极为靠谱、做事严谨的第一印象。
+
+你可以直接在右侧将此段更新到代码中，随时点击 **Preview** 预览最新的效果哦！有任何其他想要微调的地方随时告诉我。
