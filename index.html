@@ -94,7 +94,7 @@
 
             <!-- Desktop CTA -->
             <div class="hidden md:block">
-                <a href="#pricing" class="bg-berry-700 hover:bg-berry-800 text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all hover:shadow-md transform hover:scale-[1.02]">
+                <a href="#pricing" class="bg-berry-700 hover:bg-berry-800 text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all hover:shadow-md transform hover:scale-[1.02] whitespace-nowrap">
                     お問い合わせ
                 </a>
             </div>
@@ -209,7 +209,7 @@
 
                 <div class="space-y-4 text-sm sm:text-base leading-relaxed text-warm-900 font-serif">
                     <p class="font-bold text-berry-700">
-                        女性向け作品を中心とした中国語ローカライズサービスを提供しています。
+                        女性向け作品を中心とした中国語ローカライズ服务を提供しています。
                     </p>
                     <p>
                         乙女ゲーム、シチュエーションボイス、女性向け漫画などの翻訳経験を活かし、単なる機械的な直訳ではなく、中国語圏のユーザーに感情の機微が極めて自然に伝わる表現を最も重視しています。
@@ -419,7 +419,7 @@
                     シチュエーションボイス・ASMRドラマ台本
                 </h4>
                 <p class="text-xs sm:text-sm text-warm-900 leading-relaxed font-serif">
-                    キャラクター特有の感情の揺れ動きや甘い語りかけ、ブレス位置の整合性などを完璧に再現。原作者様の世界観を損なわずに魅力的な中国語へと翻訳しました。
+                    キャラクター特有 of 感情の揺れ動きや甘い語りかけ、ブレス位置の整合性などを完璧に再現。原作者様の世界観を損なわずに魅力的な中国語へと翻訳しました。
                 </p>
                 <span class="block text-[10px] text-berry-500 font-semibold">※守秘義務契約遵守（作品名非公開）</span>
             </div>
@@ -547,6 +547,122 @@
     </div>
 </section>
 
+<!-- Contact Section -->
+<section id="pricing" class="py-20 sm:py-28 bg-warm-50 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center space-y-4 mb-12">
+            <span class="text-xs sm:text-sm text-berry-700 font-semibold uppercase tracking-widest">Contact</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-berry-700">お問い合わせ</h2>
+            <div class="w-12 h-1 bg-berry-500 mx-auto rounded"></div>
+            <p class="text-xs sm:text-sm text-warm-900 font-serif max-w-lg mx-auto pt-2">
+                ご依頼・ご相談はメールまたはX（旧Twitter）のDMよりお願いいたします。<br>
+                以下のお問い合わせ作成ツールに入力すると、スムーズにメール用のテキストが作成できます。
+            </p>
+        </div>
+
+        <!-- Main grid containing: Quick Mail Planner & Direct Links/Payment Info -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- Mail Planner Form -->
+            <div class="md:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-rose-100/80 shadow-sm space-y-6">
+                <h3 class="text-lg font-serif font-bold text-berry-900 border-b border-rose-100 pb-3 flex items-center gap-2">
+                    <span>📝</span> お問い合わせ作成ツール
+                </h3>
+                
+                <div class="space-y-4 text-xs sm:text-sm">
+                    <!-- Name -->
+                    <div class="space-y-1">
+                        <label class="block font-semibold text-warm-900 font-serif">サークル名 / お名前 <span class="text-berry-500">*</span></label>
+                        <input type="text" id="plan-name" oninput="generateEmailTemplate()" placeholder="例：サークル名" class="w-full p-3 rounded-xl border border-rose-100 bg-warm-50/30 focus:outline-none focus:border-berry-500 font-serif">
+                    </div>
+
+                    <!-- Genre -->
+                    <div class="space-y-1">
+                        <label class="block font-semibold text-warm-900 font-serif">作品のジャンル</label>
+                        <select id="plan-genre" onchange="generateEmailTemplate()" class="w-full p-3 rounded-xl border border-rose-100 bg-warm-50/30 focus:outline-none focus:border-berry-500 font-serif">
+                            <option value="乙女ゲーム・ノベルゲーム">乙女ゲーム・ノベルゲーム</option>
+                            <option value="音声作品（シチュエーションボイスなど）">音声作品（シチュエーションボイスなど）</option>
+                            <option value="漫画（翻訳・写植一括）">漫画（翻訳・写植一括）</option>
+                            <option value="その他同人作品">その他同人作品</option>
+                        </select>
+                    </div>
+
+                    <!-- Volume -->
+                    <div class="space-y-1">
+                        <label class="block font-semibold text-warm-900 font-serif">想定ボリューム</label>
+                        <input type="text" id="plan-volume" oninput="generateEmailTemplate()" placeholder="例：30,000文字、ボイス約60分" class="w-full p-3 rounded-xl border border-rose-100 bg-warm-50/30 focus:outline-none focus:border-berry-500 font-serif">
+                    </div>
+
+                    <!-- Deadline -->
+                    <div class="space-y-1">
+                        <label class="block font-semibold text-warm-900 font-serif">希望の翻訳納期</label>
+                        <input type="text" id="plan-deadline" oninput="generateEmailTemplate()" placeholder="例：〇月下旬頃、相談したい" class="w-full p-3 rounded-xl border border-rose-100 bg-warm-50/30 focus:outline-none focus:border-berry-500 font-serif">
+                    </div>
+
+                    <!-- Budget -->
+                    <div class="space-y-1">
+                        <label class="block font-semibold text-warm-900 font-serif">ご予算の目安</label>
+                        <input type="text" id="plan-budget" oninput="generateEmailTemplate()" placeholder="例：〇万円以内、相談して決めたい" class="w-full p-3 rounded-xl border border-rose-100 bg-warm-50/30 focus:outline-none focus:border-berry-500 font-serif">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generated Text Output and Direct Contact Info -->
+            <div class="md:col-span-5 space-y-6 flex flex-col justify-between">
+                <!-- Text Preview and Copy -->
+                <div class="bg-white p-6 rounded-3xl border border-rose-100/80 shadow-sm space-y-4 flex-1 flex flex-col">
+                    <h4 class="text-sm font-serif font-bold text-berry-700">生成された本文（コピーしてお使いください）</h4>
+                    <textarea id="plan-output" readonly class="w-full p-3 rounded-xl border border-rose-100 bg-warm-50/30 text-xs text-warm-900 font-serif leading-relaxed resize-none focus:outline-none flex-1 min-h-[180px]"></textarea>
+                    
+                    <div class="relative">
+                        <button type="button" onclick="copyTemplateText()" class="w-full py-3 bg-berry-700 hover:bg-berry-800 text-white rounded-xl text-xs font-semibold tracking-wider transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-2 whitespace-nowrap">
+                            📋 本文をコピーする
+                        </button>
+                        <span id="copy-feedback-planner" class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-warm-900 text-white text-[10px] px-3 py-1 rounded-md opacity-0 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                            コピーしました！
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Direct Contact & Payments -->
+                <div class="bg-white p-6 rounded-3xl border border-rose-100/80 shadow-sm space-y-4">
+                    <h4 class="text-sm font-serif font-bold text-berry-700">直接のご連絡先</h4>
+                    <div class="space-y-3 text-xs sm:text-sm">
+                        <!-- Email -->
+                        <div class="flex items-center justify-between gap-2 p-2.5 bg-warm-50/50 rounded-xl border border-rose-50/50">
+                            <span class="font-semibold text-warm-900 truncate">✉️ tr.shitara@gmail.com</span>
+                            <div class="relative flex-shrink-0">
+                                <button onclick="copyEmailToClipboard()" class="text-xs text-berry-700 hover:text-berry-900 font-bold px-2 py-1 bg-rose-50 rounded-md transition-colors">
+                                    コピー
+                                </button>
+                                <span id="copy-feedback-email" class="absolute -top-10 right-0 bg-warm-900 text-white text-[10px] px-2 py-1 rounded-md opacity-0 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                                    コピーしました！
+                                </span>
+                            </div>
+                        </div>
+                        <!-- X (Twitter) -->
+                        <a href="https://x.com/kenzu1y" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-2 p-2.5 bg-warm-50/50 rounded-xl border border-rose-50/50 hover:bg-rose-50/20 transition-colors">
+                            <span class="font-semibold text-warm-900 truncate">📱 X（旧Twitter）: @kenzu1y</span>
+                            <span class="text-xs text-berry-700 font-bold px-2 py-1 bg-rose-50 rounded-md flex-shrink-0">DMを開く ↗</span>
+                        </a>
+                    </div>
+
+                    <!-- Payments -->
+                    <div class="border-t border-rose-50 pt-4 mt-2">
+                        <p class="text-xs font-serif font-semibold text-berry-700 mb-1.5">💳 対応可能な決済方法</p>
+                        <p class="text-[11px] text-warm-900 font-serif leading-relaxed">
+                            PayPay、銀行口座、Wiseなどに対応。<br>
+                            ※海外送金にも柔軟に対応しております。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <!-- Footer Slogan and Signature -->
 <footer class="bg-berry-900 text-white py-12 relative overflow-hidden">
     <!-- Beautiful gradient overlays inside footer -->
@@ -623,7 +739,7 @@
         
         const isHidden = content.classList.contains('hidden');
         
-        // Hide all first to provide a clean visual flow (Adjusted to 3 items)
+        // Hide all first to provide a clean visual flow
         for (let i = 1; i <= 3; i++) {
             document.getElementById(`accordion-content-${i}`).classList.add('hidden');
             document.getElementById(`arrow-icon-${i}`).classList.remove('rotate-180');
